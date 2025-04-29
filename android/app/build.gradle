@@ -102,6 +102,20 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+
+    flavorDimensions "brand"
+    productFlavors {
+        vestel {
+            dimension "brand"
+            applicationId "com.vestel.app"
+            resValue "string", "app_name", "Vestel App"
+        }
+        im {
+            dimension "brand"
+            applicationId "com.im.app"
+            resValue "string", "app_name", "IM App"
+        }
+    }
 }
 
 dependencies {

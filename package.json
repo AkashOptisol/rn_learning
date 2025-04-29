@@ -8,7 +8,13 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "build:vestel:android": "cd android && ./gradlew assembleVestelRelease",
+    "build:im:android": "cd android && ./gradlew assembleImRelease",
+    "build:vestel:ios": "react-native run-ios --scheme 'Vestel'",
+    "build:im:ios": "react-native run-ios --scheme 'IM'",
+    "build:vestel:ios:release": "react-native run-ios --scheme 'Vestel' --configuration Release",
+    "build:im:ios:release": "react-native run-ios --scheme 'IM' --configuration Release"
   },
   "dependencies": {
     "@invertase/react-native-apple-authentication": "^2.3.0",
